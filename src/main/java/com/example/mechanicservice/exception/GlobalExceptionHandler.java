@@ -1,4 +1,5 @@
 package com.example.mechanicservice.exception;
+// Global exceptions for mechanic REST service
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
