@@ -2,10 +2,10 @@ package com.example.mechanicservice.web;
 
 import com.example.mechanicservice.model.Mechanic;
 import com.example.mechanicservice.service.MechanicService;
+import com.example.mechanicservice.web.dto.AvailabilityDTO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 @RestController
@@ -36,7 +36,8 @@ public class MechanicController {
     @PutMapping("/{id}/availability")
     public void updateAvailability(
             @PathVariable("id") UUID id,
-            @RequestBody Map<String, Boolean> body) {
-        mechanicService.updateAvailability(id, body.get("available"));
+            @RequestBody AvailabilityDTO dto) {
+        mechanicService.updateAvailability(id, dto.isAvailable());
     }
+
 }
