@@ -28,6 +28,7 @@ public class MechanicService {
 
         if (available.isEmpty()) {
             logger.warn("No available mechanics found for assignment");
+
             throw new NoAvailableMechanicException("No available mechanic at the moment");
         }
 
