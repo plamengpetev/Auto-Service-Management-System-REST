@@ -43,7 +43,7 @@ class MechanicControllerApiTest {
                 .available(true)
                 .build();
 
-        repo.save(m);      // <-- Hibernate генерира ID
+        repo.save(m);
         mechanicId = m.getId();
     }
 

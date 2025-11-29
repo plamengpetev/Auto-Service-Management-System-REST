@@ -31,7 +31,7 @@ class MechanicServiceIntegrationTest {
                 .available(true)
                 .build();
 
-        repo.save(m); // <-- ID се генерира правилно от Hibernate
+        repo.save(m);
 
         Mechanic assigned = service.assignMechanic();
 
